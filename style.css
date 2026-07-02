@@ -1,0 +1,179 @@
+:root {
+    --bg-color: #f3f4f6;
+    --primary-color: #1e293b;
+    --accent-color: #2563eb;
+    --border-color: #cbd5e1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #334155;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.editor-side {
+    width: 400px;
+    background: #ffffff;
+    padding: 24px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    overflow-y: auto;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.editor-side h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.btn-print {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-print:hover {
+    background-color: #1d4ed8;
+}
+
+/* Preview Sheet Layout */
+.preview-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.resume-sheet {
+    background: white;
+    width: 21cm; /* Exact A4 dimensions */
+    min-height: 29.7cm;
+    padding: 2cm;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.resume-header {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.resume-header h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.resume-header .title {
+    font-size: 18px;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.resume-section {
+    margin-bottom: 25px;
+}
+
+.resume-section h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.formatted-text {
+    font-size: 14px;
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-tags span {
+    background: #e2e8f0;
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Print Optimization Styles */
+@media print {
+    body {
+        background: white;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .preview-side {
+        padding: 0;
+    }
+    .resume-sheet {
+        box-shadow: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}

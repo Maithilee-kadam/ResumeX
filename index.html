@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Resume Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Editor Sidebar -->
+        <header class="editor-side no-print">
+            <h2>Resume Builder</h2>
+            <form id="resumeForm">
+                <div class="form-group">
+                    <label for="inputName">Full Name</label>
+                    <input type="text" id="inputName" placeholder="John Doe" value="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="inputTitle">Professional Title</label>
+                    <input type="text" id="inputTitle" placeholder="Software Engineer" value="Software Engineer">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email Address</label>
+                    <input type="email" id="inputEmail" placeholder="john.doe@example.com" value="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="inputPhone">Phone Number</label>
+                    <input type="text" id="inputPhone" placeholder="+1 234 567 890" value="+1 234 567 890">
+                </div>
+                <div class="form-group">
+                    <label for="inputSummary">Professional Summary</label>
+                    <textarea id="inputSummary" rows="4" placeholder="Briefly describe your career background..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputExperience">Work Experience</label>
+                    <textarea id="inputExperience" rows="5" placeholder="Company Name - Role (Year)&#10;• Accomplishment 1&#10;• Accomplishment 2"></textarea>
+                </div>
+	<div class="form-group">
+    <label for="inputProjects">Projects</label>
+    <textarea id="inputProjects" rows="5"
+        placeholder="Resume Builder - HTML, CSS, JavaScript&#10;• Developed an ATS-friendly resume builder&#10;• Implemented PDF download"></textarea>
+</div>
+
+
+                <div class="form-group">
+                    <label for="inputEducation">Education</label>
+                    <textarea id="inputEducation" rows="3" placeholder="University Name - Degree (Year)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputSkills">Skills (Comma separated)</label>
+                    <input type="text" id="inputSkills" placeholder="JavaScript, Python, Project Management" value="HTML, CSS, JavaScript">
+                </div>
+
+<div class="form-group">
+    <label for="inputCertifications">Certifications</label>
+    <textarea id="inputCertifications" rows="4"
+        placeholder="Java Programming - Infosys Springboard&#10;Python - HackerRank"></textarea>
+</div>
+
+<div class="form-group">
+    <label for="inputLanguages">Languages</label>
+    <input type="text"
+           id="inputLanguages"
+           placeholder="English, Hindi, Marathi">
+</div>
+
+                <button type="button" class="btn-print" onclick="window.print()">Download PDF / Print</button>
+
+            </form>
+        </header>
+
+        <!-- Preview Sheet Area -->
+        <main class="preview-side">
+            <div class="resume-sheet" id="printArea">
+                <div class="resume-header">
+                    <h1 id="viewName">John Doe</h1>
+                    <p class="title" id="viewTitle">Software Engineer</p>
+                    <div class="contact-info">
+                        <span id="viewEmail">john@example.com</span> | 
+                        <span id="viewPhone">+1 234 567 890</span>
+                    </div>
+                </div>
+
+                <div class="resume-section" id="secSummary">
+                    <h3>Professional Summary</h3>
+                    <p id="viewSummary">Passionate developer focused on building interactive web tools and writing efficient code.</p>
+                </div>
+
+                <div class="resume-section" id="secExperience">
+                    <h3>Work Experience</h3>
+                    <div class="formatted-text" id="viewExperience">
+                        <strong>Tech Solutions Inc. - Frontend Web Developer (2024 - Present)</strong><br>
+                        • Built dynamic interactive single page applications.<br>
+                        • Optimized assets for high-speed page performance.
+                    </div>
+                </div>
+
+                <div class="resume-section" id="secEducation">
+                    <h3>Education</h3>
+                    <div class="formatted-text" id="viewEducation">
+                        <strong>State University - Bachelor of Science in Computer Science (2020 - 2024)</strong>
+                    </div>
+                </div>
+
+                <div class="resume-section" id="secSkills">
+                    <h3>Skills</h3>
+                    <div class="skills-tags" id="viewSkills">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+<div class="resume-section" id="secProjects">
+    <h3>Projects</h3>
+    <div class="formatted-text" id="viewProjects"></div>
+</div>
+
+<div class="resume-section" id="secCertifications">
+    <h3>Certifications</h3>
+    <div class="formatted-text" id="viewCertifications"></div>
+</div>
+
+<div class="resume-section" id="secLanguages">
+    <h3>Languages</h3>
+    <div class="formatted-text" id="viewLanguages"></div>
+</div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
