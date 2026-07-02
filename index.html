@@ -36,33 +36,26 @@
                     <label for="inputExperience">Work Experience</label>
                     <textarea id="inputExperience" rows="5" placeholder="Company Name - Role (Year)&#10;• Accomplishment 1&#10;• Accomplishment 2"></textarea>
                 </div>
-	<div class="form-group">
-    <label for="inputProjects">Projects</label>
-    <textarea id="inputProjects" rows="5"
-        placeholder="Resume Builder - HTML, CSS, JavaScript&#10;• Developed an ATS-friendly resume builder&#10;• Implemented PDF download"></textarea>
-</div>
+				<div class="form-group">
+			    <label for="inputProjects">Projects</label>
+			    <textarea id="inputProjects" rows="5"
+			        placeholder="Resume Builder - HTML, CSS, JavaScript&#10;• Developed an ATS-friendly resume builder&#10;• Implemented PDF download"></textarea>
+			    </div>
 
-
-                <div class="form-group">
-                    <label for="inputEducation">Education</label>
-                    <textarea id="inputEducation" rows="3" placeholder="University Name - Degree (Year)"></textarea>
-                </div>
                 <div class="form-group">
                     <label for="inputSkills">Skills (Comma separated)</label>
                     <input type="text" id="inputSkills" placeholder="JavaScript, Python, Project Management" value="HTML, CSS, JavaScript">
                 </div>
+                <div class="form-group">
+                    <label for="inputEducation">Education</label>
+                    <textarea id="inputEducation" rows="3" placeholder="University Name - Degree (Year)"></textarea>
+                </div>
+
 
 <div class="form-group">
     <label for="inputCertifications">Certifications</label>
     <textarea id="inputCertifications" rows="4"
         placeholder="Java Programming - Infosys Springboard&#10;Python - HackerRank"></textarea>
-</div>
-
-<div class="form-group">
-    <label for="inputLanguages">Languages</label>
-    <input type="text"
-           id="inputLanguages"
-           placeholder="English, Hindi, Marathi">
 </div>
 
                 <button type="button" class="btn-print" onclick="window.print()">Download PDF / Print</button>
@@ -95,13 +88,10 @@
                         • Optimized assets for high-speed page performance.
                     </div>
                 </div>
-
-                <div class="resume-section" id="secEducation">
-                    <h3>Education</h3>
-                    <div class="formatted-text" id="viewEducation">
-                        <strong>State University - Bachelor of Science in Computer Science (2020 - 2024)</strong>
-                    </div>
-                </div>
+				<div class="resume-section" id="secProjects">
+				    <h3>Projects</h3>
+				    <div class="formatted-text" id="viewProjects"></div>
+				</div>
 
                 <div class="resume-section" id="secSkills">
                     <h3>Skills</h3>
@@ -109,21 +99,17 @@
                         <span>HTML</span><span>CSS</span><span>JavaScript</span>
                     </div>
                 </div>
-<div class="resume-section" id="secProjects">
-    <h3>Projects</h3>
-    <div class="formatted-text" id="viewProjects"></div>
-</div>
+                <div class="resume-section" id="secEducation">
+                    <h3>Education</h3>
+                    <div class="formatted-text" id="viewEducation">
+                        <strong>State University - Bachelor of Science in Computer Science (2020 - 2024)</strong>
+                    </div>
+                </div>
 
 <div class="resume-section" id="secCertifications">
     <h3>Certifications</h3>
     <div class="formatted-text" id="viewCertifications"></div>
 </div>
-
-<div class="resume-section" id="secLanguages">
-    <h3>Languages</h3>
-    <div class="formatted-text" id="viewLanguages"></div>
-</div>
-            </div>
         </main>
     </div>
     <script src="script.js"></script>
