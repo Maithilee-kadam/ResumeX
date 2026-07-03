@@ -91,12 +91,14 @@ body {
     overflow-y: auto;
 }
 
-.resume-sheet {
-    background: white;
-    width: 21cm; /* Exact A4 dimensions */
-    min-height: 29.7cm;
-    padding: 2cm;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+.resume-sheet{
+    width:210mm;
+    min-height:297mm;
+    background:#fff;
+    padding:25mm 20mm;
+    margin:20px auto;
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+    overflow:hidden;
 }
 
 .resume-header {
@@ -124,24 +126,26 @@ body {
     color: #64748b;
 }
 
-.resume-section {
-    margin-bottom: 25px;
+.resume-section{
+    margin-bottom:12px;
 }
 
-.resume-section h3 {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: var(--primary-color);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 4px;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+.resume-section h3{
+    font-size:18px;
+    font-weight:700;
+    text-transform:uppercase;
+    color:#1f2937;
+    border-bottom:1px solid #cbd5e1;
+    padding-bottom:3px;
+    margin-bottom:5px;
+    width:85%;
 }
 
-.formatted-text {
-    font-size: 14px;
-    white-space: pre-line;
-    line-height: 1.6;
+.formatted-text{
+    font-size:14px;
+    line-height:1.5;
+    white-space:normal;
+    margin-top:0;
 }
 
 .skills-tags {
@@ -167,13 +171,23 @@ body {
     .no-print {
         display: none !important;
     }
-    .preview-side {
-        padding: 0;
-    }
-    .resume-sheet {
-        box-shadow: none;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+    .preview-side{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:#eceff1;
+    padding:40px;
+    overflow:auto;
 }
+    .resume-sheet{
+    width:210mm;
+    min-height:297mm;
+    background:white;
+    padding:25mm;
+    margin:30px auto;
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+}
+}
+
+
