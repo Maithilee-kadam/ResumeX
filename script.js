@@ -2,16 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("resumeForm");
 
     // Map form IDs directly to preview element IDs
-    const fieldMap = {
+const fieldMap = {
     "inputName": "viewName",
     "inputTitle": "viewTitle",
     "inputEmail": "viewEmail",
     "inputPhone": "viewPhone",
+    "inputLinkedIn": "viewLinkedIn",
+    "inputGithub": "viewGithub",
     "inputSummary": "viewSummary",
     "inputExperience": "viewExperience",
     "inputEducation": "viewEducation",
     "inputProjects": "viewProjects",
-    "inputCertifications": "viewCertifications",
+    "inputCertifications": "viewCertifications"
 };
 
     // Live update fields text elements
