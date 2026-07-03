@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "inputEducation": "viewEducation",
     "inputProjects": "viewProjects",
     "inputCertifications": "viewCertifications",
-    "inputLanguages": "viewLanguages"
 };
 
     // Live update fields text elements
@@ -24,11 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const sectionEl = previewEl.closest('.resume-section');
             
             // Format newlines to linebreaks for textareas
-            if (e.target.tagName === "TEXTAREA") {
-                previewEl.innerHTML = e.target.value.replace(/\n/g, '<br>');
-            } else {
-                previewEl.textContent = e.target.value;
-            }
+if (e.target.tagName === "TEXTAREA") {
+    const text = e.target.value.trim();
+    previewEl.innerHTML = text.replace(/\n/g, "<br>");
+} else {
+    previewEl.textContent = e.target.value.trim();
+}
 
             // Hide section if input data is cleared out completely
             if(sectionEl) {
